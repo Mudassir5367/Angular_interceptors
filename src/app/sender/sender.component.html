@@ -1,0 +1,4 @@
+<form #myForm="ngForm" (ngSubmit)="test(myForm.value); myForm.reset();" >
+    <input type="text" name="name"[(ngModel)]="text">
+    <button>Send</button>
+</form>

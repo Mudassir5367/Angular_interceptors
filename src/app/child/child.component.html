@@ -1,0 +1,7 @@
+<h3>CHILD</h3>
+<select  [(ngModel)]="selected" (change)="selectedValue($event)" >
+    <option *ngFor="let friend of sendFriendsToChild">{{friend.name}}</option>
+</select>
+
+<!-- <h2 *ngIf="selected == 'Verna Gonzales'">Show</h2> -->
+<!-- {{selected.name === 'Verna Gonzales' ? 'Show': ''}} -->

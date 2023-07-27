@@ -1,0 +1,13 @@
+<!-- <app-class-style></app-class-style> -->
+<!-- <app-sender></app-sender> -->
+<h3>PARENT</h3>
+<select (change)="detectedValue($event)" [(ngModel)]="valueFromChild">
+    <option *ngFor="let friend of friends">{{friend.name}}</option>
+</select>
+<app-child [sendFriendsToChild]="friends" [selected]="detectedValueInParent" (selectedValueToParent)="selectedValue($event)"></app-child>
+<router-outlet></router-outlet>
+<!-- <app-promises></app-promises> -->
+
+<!-- <h3>{{value | titlecase}}</h3>
+<h3>{{date | date:'medium'}}</h3> -->
+
